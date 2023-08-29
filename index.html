@@ -2,10 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+        <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
 </head>
 <body>
-  <h1>Привіт</h1>  
+  <main>
+    <section class="subscription-section" id="subscription">
+      <h2 class="subscription-title">Newsletter</h2>
+      <p class="subscription-description">
+        Every week we will send you new designs and information about sales.
+      </p>
+      <form class="subscription-form">
+        <div class="name-input-container">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            minlength="2"
+            maxlength="16"
+            required
+          />
+          <div class="validation-message">
+            Please enter a name between 2 and 16 characters.
+          </div>
+        </div>
+        
+        <div class="email-input-container">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+          />
+        </div>
+        <div class="subscription-container-checkbox">
+          <label class="subscription-label">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="checkbox"
+              class="subscription-checkbox"
+              required
+            />
+            <span class="checkbox-description">Agree to subscribe to the newsletter</span>
+          </label>
+        </div>
+          <button type="button" class="subscription-button">Send</button>
+          <div class="subscription-container-image">
+            <img src="../img/subscription/subscription-image.jpg" alt="image" />
+        </div>
+      </form>
+    </section>   
+  </main>
 </body>
 </html>
